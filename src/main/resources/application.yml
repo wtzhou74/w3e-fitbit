@@ -1,0 +1,39 @@
+server:
+  port: 8081
+
+fitbit:
+  oauth:
+    security:
+      clientId: CLIENT_ID
+      clientSecret: CLIENT_SECRET
+      authorizeUrl: https://www.fitbit.com/oauth2/authorize
+      accessTokenUrl: https://api.fitbit.com/oauth2/token
+      revokeUrl: https://api.fitbit.com/oauth2/revoke
+      scope: "activity heartrate location nutrition profile settings sleep social weight"
+    resource:
+      dailyActivitySummary: https://api.fitbit.com/1/user/-/activities/date/2018-12-24.json
+    
+spring:
+  mvc:
+    view:
+      prefix: /
+      suffix: .jsp
+  datasource:
+    url: "jdbc:mysql://localhost:3306/DATABASE_NAME?zeroDateTimeBehavior=convertToNull&useSSL=false"
+    username: USERNAME
+    password: PASSWORD
+    driver-class-name: com.mysql.jdbc.Driver
+    tomcat:
+      max-wait: 10000
+      max-active: 5
+      test-on-borrow: true
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  messages:
+    basename: validation
+    
+logging:
+  level:
+    org.springframework.security: TRACE
