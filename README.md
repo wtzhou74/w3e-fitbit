@@ -1,5 +1,5 @@
 # W3E-Fitbit
-This is a simple demo application built on Spring Boot including functionalities - registration of W3E account, log in/out, authorize to fitbit account to view daily activity summary, revoke authorization and remove W3E account etc.
+This is a simple demo application built on Spring Boot including functionalities - registration of W3E account, log in/out, authorize third party account to access fitbit daily activity summary, revoke authorization and remove W3E account etc.
 ## Technology Stack
 + Java JDK 8
 + Spring Boot
